@@ -2,9 +2,9 @@
 
 namespace Edalzell\StatamicSettings\Tests;
 
+use Edalzell\StatamicSettings\StatamicSettingsServiceProvider;
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Orchestra\Testbench\TestCase as Orchestra;
-use Edalzell\StatamicSettings\StatamicSettingsServiceProvider;
 
 class TestCase extends Orchestra
 {

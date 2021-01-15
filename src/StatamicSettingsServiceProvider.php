@@ -2,8 +2,8 @@
 
 namespace Edalzell\StatamicSettings;
 
-use Illuminate\Support\ServiceProvider;
 use Edalzell\StatamicSettings\Commands\StatamicSettingsCommand;
+use Illuminate\Support\ServiceProvider;
 
 class StatamicSettingsServiceProvider extends ServiceProvider
 {
