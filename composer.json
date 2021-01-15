@@ -1,17 +1,17 @@
 {
-    "name": ":vendor_name/:package_name",
-    "description": ":package_description",
+    "name": "edalzell/statamic-settings",
+    "description": "statamic-settings",
     "keywords": [
-        ":vendor_name",
-        ":package_name"
+        "edalzell",
+        "statamic-settings"
     ],
-    "homepage": "https://github.com/:vendor_name/:package_name",
+    "homepage": "https://github.com/edalzell/statamic-settings",
     "license": "MIT",
     "authors": [
         {
-            "name": ":author_name",
-            "email": ":author_email",
-            "homepage": ":author_homepage",
+            "name": "edalzell",
+            "email": "erin@thedalzells.org",
+            "homepage": "thedalzells.org",
             "role": "Developer"
         }
     ],
@@ -25,13 +25,13 @@
     },
     "autoload": {
         "psr-4": {
-            "Spatie\\Skeleton\\": "src",
-            "Spatie\\Skeleton\\Database\\Factories\\": "database/factories"
+            "Edalzell\\StatamicSettings\\": "src",
+            "Edalzell\\StatamicSettings\\Database\\Factories\\": "database/factories"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Spatie\\Skeleton\\Tests\\": "tests"
+            "Edalzell\\StatamicSettings\\Tests\\": "tests"
         }
     },
     "scripts": {
@@ -45,10 +45,10 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Spatie\\Skeleton\\SkeletonServiceProvider"
+                "Edalzell\\StatamicSettings\\StatamicSettingsServiceProvider"
             ],
             "aliases": {
-                "Skeleton": "Spatie\\Skeleton\\SkeletonFacade"
+                "StatamicSettings": "Edalzell\\StatamicSettings\\StatamicSettingsFacade"
             }
         }
     },
@@ -57,11 +57,11 @@
     "funding": [
         {
             "type": "github",
-            "url": "https://github.com/sponsors/:vendor_name"
+            "url": "https://github.com/sponsors/edalzell"
         },
         {
             "type": "other",
-            "url": ":author_homepage"
+            "url": "thedalzells.org"
         }
     ]
 }

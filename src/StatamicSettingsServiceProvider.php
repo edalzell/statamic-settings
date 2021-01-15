@@ -1,24 +1,24 @@
 <?php
 
-namespace Spatie\Skeleton;
+namespace Edalzell\StatamicSettings;
 
 use Illuminate\Support\ServiceProvider;
-use Spatie\Skeleton\Commands\SkeletonCommand;
+use Edalzell\StatamicSettings\Commands\StatamicSettingsCommand;
 
-class SkeletonServiceProvider extends ServiceProvider
+class StatamicSettingsServiceProvider extends ServiceProvider
 {
     public function boot()
     {
         if ($this->app->runningInConsole()) {
             $this->publishes([
-                __DIR__ . '/../config/skeleton.php' => config_path('skeleton.php'),
+                __DIR__ . '/../config/statamic-settings.php' => config_path('statamic-settings.php'),
             ], 'config');
 
             $this->publishes([
-                __DIR__ . '/../resources/views' => base_path('resources/views/vendor/skeleton'),
+                __DIR__ . '/../resources/views' => base_path('resources/views/vendor/statamic-settings'),
             ], 'views');
 
-            $migrationFileName = 'create_skeleton_table.php';
+            $migrationFileName = 'create_statamic_settings_table.php';
             if (! $this->migrationFileExists($migrationFileName)) {
                 $this->publishes([
                     __DIR__ . "/../database/migrations/{$migrationFileName}.stub" => database_path('migrations/' . date('Y_m_d_His', time()) . '_' . $migrationFileName),
@@ -26,16 +26,16 @@ class SkeletonServiceProvider extends ServiceProvider
             }
 
             $this->commands([
-                SkeletonCommand::class,
+                StatamicSettingsCommand::class,
             ]);
         }
 
-        $this->loadViewsFrom(__DIR__ . '/../resources/views', 'skeleton');
+        $this->loadViewsFrom(__DIR__ . '/../resources/views', 'statamic-settings');
     }
 
     public function register()
     {
-        $this->mergeConfigFrom(__DIR__ . '/../config/skeleton.php', 'skeleton');
+        $this->mergeConfigFrom(__DIR__ . '/../config/statamic-settings.php', 'statamic-settings');
     }
 
     public static function migrationFileExists(string $migrationFileName): bool

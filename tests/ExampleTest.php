@@ -1,6 +1,6 @@
 <?php
 
-namespace Spatie\Skeleton\Tests;
+namespace Edalzell\StatamicSettings\Tests;
 
 class ExampleTest extends TestCase
 {
